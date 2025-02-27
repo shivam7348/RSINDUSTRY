@@ -6,7 +6,7 @@ import slider2 from "../Slider/2.png"
 const AutoSlider = () => {
   const slides = [
     { url: slider1, title: "" },
-    // { url: slider2, title: "" },
+    { url: slider2, title: "" },
     // { url: image1, title: "Party Decorations" },
     // { url: image2, title: "Wedding Services" },
   ];
