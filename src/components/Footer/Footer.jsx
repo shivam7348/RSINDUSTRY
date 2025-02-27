@@ -116,7 +116,7 @@ const Footer = () => {
           {/* Map */}
           <div className="space-y-6">
             <h3 className="text-white text-lg font-semibold">Location</h3>
-            <div className="rounded-lg overflow-hidden">
+            {/* <div className="rounded-lg overflow-hidden">
               <iframe
                 className="w-full h-48"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15503130.135087622!2d79.097002!3d18.440857!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bccdfd080c233b3%3A0xdffdfa7ea808c2b6!2sSai%20krishna%20poultry%20equipments!5e0!3m2!1sen!2sin!4v1731940118279!5m2!1sen!2sin"
@@ -124,7 +124,7 @@ const Footer = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Krishna Poultry Equipment Location"
               />
-            </div>
+            </div> */}
           </div>
         </div>
 
