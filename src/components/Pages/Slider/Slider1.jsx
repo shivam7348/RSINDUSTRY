@@ -6,9 +6,8 @@ import slider2 from "../Slider/2.png"
 const AutoSlider = () => {
   const slides = [
     { url: slider1, title: "" },
-    { url: slider2, title: "" },
-    // { url: image1, title: "Party Decorations" },
-    // { url: image2, title: "Wedding Services" },
+    // { url: slider2, title: "" },
+   
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,7 +45,7 @@ const AutoSlider = () => {
 
   return (
     <div
-      className="w-full flex items-center justify-center p-4"
+      className="w-full flex items-center justify-center mx-auto"
       onKeyDown={handleKeyDown}
       tabIndex={0}
       role="region"

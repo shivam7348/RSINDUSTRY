@@ -70,18 +70,18 @@ const MainHeader = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header 
+    <header
       className={`w-full bg-white sticky top-0 z-50 transition-all duration-300 ${
         scrolled ? "shadow-sm py-2" : "py-2"
       }`}
     >
-      <div className="container  mx-auto px-6 flex justify-between items-center">
+      <div className="container  px-12 py-2 flex justify-between items-center">
         <div className="transition-transform duration-300 hover:scale-105">
           <Link to="/" aria-label="Home">
             <img
               src={logo}
               alt="Company Logo"
-              className="h-12 lg:h-12 transition-all duration-300"
+              className="h-12 lg:h-15 transition-all duration-300"
             />
           </Link>
         </div>
@@ -97,9 +97,11 @@ const MainHeader = () => {
         </button>
 
         {/* Navigation Menu Overlay */}
-        <div 
+        <div
           className={`${
-            isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            isMenuOpen
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none"
           } lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300`}
           onClick={() => setIsMenuOpen(false)}
           aria-hidden="true"
@@ -129,23 +131,31 @@ const MainHeader = () => {
           </div>
 
           {/* Menu Links */}
-          <ul className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-5
-              text-gray-800 font-medium text-lg p-5 lg:p-0 w-full lg:w-auto">
+          <ul
+            className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-5
+              text-gray-800 font-medium text-lg p-2 lg:p-0  w-full lg:w-auto mx-auto"
+          >
             {navLinks.map((link) => (
               <li key={link.path} className="w-full lg:w-auto">
                 <Link
                   to={link.path}
-                  className={`relative group inline-block py-1 w-full lg:w-auto
-                    ${isActive(link.path) ? "text-black-600 font-semibold" : "text-gray-700 hover:text-gray-900"}`}
+                  className={`relative group inline-block py-1 w-full lg:w-auto whitespace-nowrap
+          ${
+            isActive(link.path)
+              ? "text-black-600 font-semibold"
+              : "text-gray-700 hover:text-gray-900"
+          }`}
                   aria-current={isActive(link.path) ? "page" : undefined}
                 >
                   {link.label}
-                  <span 
+                  <span
                     className={`absolute left-0 bottom-0 w-full h-0.5 bg-black-600 
-                      transition-all duration-300 origin-left
-                      ${isActive(link.path) 
-                        ? "scale-x-100" 
-                        : "scale-x-0 group-hover:scale-x-100"}`}
+            transition-all duration-300 origin-left
+            ${
+              isActive(link.path)
+                ? "scale-x-100"
+                : "scale-x-0 group-hover:scale-x-100"
+            }`}
                   ></span>
                 </Link>
               </li>

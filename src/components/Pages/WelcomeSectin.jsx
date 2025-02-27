@@ -32,28 +32,34 @@ const images = [
 ];
 
 const WelcomeSection = () => {
-  return (
-    <div className="p-6 text-center bg-gray-100 min-h-screen">
-      <h1 className="text-4xl font-bold text-blue-600">Welcome to Our  RS Industries</h1>
-      <p className="text-lg text-gray-700 mt-2">Leading the way in quality and innovation</p>
-         
-         <h2 className="text-4xl font-bold mt-3"> Our Product </h2>
+ return (
+   <div className="p-6 text-center min-h-screen max-w-7xl mx-auto bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200">
+     <h1 className="text-5xl font-extrabold text-blue-700 drop-shadow-md">
+       Welcome to R.S. Industries
+     </h1>
+     <p className="text-xl text-gray-800 mt-2 font-medium">
+       Leading the way in quality and innovation
+     </p>
 
-         
-      
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {images.map((src, index) => (
-          <div key={index} className="overflow-hidden rounded-lg shadow-lg">
-            <img
-              src={src}
-              alt={`Gallery Image ${index + 1}`}
-              className="w-full h-48 object-fit transition-transform duration-300 hover:scale-105"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+     <h2 className="text-4xl font-bold mt-5 text-gray-900">Our Products</h2>
+
+     <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+       {images.map((src, index) => (
+         <div
+           key={index}
+           className="overflow-hidden rounded-lg shadow-xl bg-white hover:shadow-2xl transition-all duration-300"
+         >
+           <img
+             src={src}
+             alt={`Gallery Image ${index + 1}`}
+             className="w-full h-52 object-cover transition-transform duration-300 hover:scale-105"
+           />
+         </div>
+       ))}
+     </div>
+   </div>
+ );
+
 };
 
 export default WelcomeSection;
