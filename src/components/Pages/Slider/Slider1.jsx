@@ -74,7 +74,7 @@ const AutoSlider = () => {
             >
               <img
                 src={slide.url}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-fit-contain"
                 alt={slide.title}
               />
               {/* Caption overlay */}
