@@ -8,10 +8,10 @@ const Banner = ({ title, breadcrumb, image }) => {
       style={{ backgroundImage: `url(${image})` }}
     >
       {/* Dark overlay for better visibility */}
-      <div className="absolute inset-6  bg-opacity-80"></div>
+      <div className="absolute inset-0  bg-opacity-50"></div>
 
       <div className="relative z-10 text-center">
-        <h1 className="text-5xl font-extrabold text-blue-500 drop-shadow-md">
+        <h1 className="text-5xl font-extrabold text-white drop-shadow-lg">
           {title}
         </h1>
         <nav className="mt-2 text-lg text-white">
@@ -20,7 +20,7 @@ const Banner = ({ title, breadcrumb, image }) => {
           </span>
           {breadcrumb && (
             <>
-              <span className="mx-2">/</span>
+            <span className="mx-2">/</span>
               <span className="text-blue-300">{breadcrumb}</span>
             </>
           )}

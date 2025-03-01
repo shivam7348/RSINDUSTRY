@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         element: <ProductComponent />,
       },
       {
-        path: "work-with",
+        path: "services",
         element: <WorkWith />,
       },
       {

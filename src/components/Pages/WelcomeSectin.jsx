@@ -10,6 +10,12 @@ import images7 from "../Header/images/Slitter-Roller-Guide-for-Hot-Rolling-Mill.
 import images8 from "../Header/images/round-metal-mill-rollers-765.jpg"
 import images9 from "../Header/images/5jggim2cfty.webp"
 import images10 from "../Header/images/4-250x250.webp"
+import images11 from "../Header/images/round-metal-mill-rollers-765.jpg"
+import images12 from "../Header/images/Slitter-Roller-Guide-for-Hot-Rolling-Mill.avif"
+import images13 from "../Header/images/Spare-Parts-for-Pellet-Mill-Gear-Wheel-Shaft-Roller-Assembly-Bearing.avif"
+import images14 from "../Header/images/spare-parts-for-steel-rolling-mills-roller-for-steel-rolling-mill.web.jpg"
+import images15 from "../Header/images/spare_parts_for_steel_rolling_mill_logo.jpg"
+import images16 from "../Header/images/special-metals-machined-components.jpg"
 
 const images = [
   images1,
@@ -22,6 +28,16 @@ const images = [
   images8,
   images9,
   images10,
+  images11,
+
+
+  images12,
+  images13,
+  images14,
+  images15,
+  images16,
+ 
+
 ];
 
 const WelcomeSection = () => {
