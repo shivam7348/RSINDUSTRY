@@ -119,7 +119,7 @@ const Header = () => {
           scrolled ? "shadow-sm py-2" : "py-4"
         }`}
       >
-        <div className="container mx-auto my-1 px-4 flex justify-center items-center relative">
+        <div className="container -m-4 my-2 px-4 flex justify-center items-center relative">
           {/* 🏆 Logo (Only Visible in Mobile View) */}
           <div className="block lg:hidden absolute left-4">
           <Link to="/"><img src={logo} alt="Company Logo" className="h-12 w-auto" />

@@ -4,7 +4,7 @@ const AboutUs = () => {
   return (
     <div className="p-4 sm:p-6 text-center min-h-screen max-w-7xl mx-auto bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200">
       {/* Section Title */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">ABOUT COMPANY</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-blue-700 mb-6 sm:mb-8">ABOUT COMPANY</h1>
 
       {/* Content Container */}
       <div className="bg-white p-6 sm:p-8 rounded-lg shadow-xl text-left">
