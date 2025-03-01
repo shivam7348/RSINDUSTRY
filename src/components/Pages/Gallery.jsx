@@ -9,7 +9,6 @@ import images7 from "../Header/images/Slitter-Roller-Guide-for-Hot-Rolling-Mill.
 import images8 from "../Header/images/round-metal-mill-rollers-765.jpg";
 import images9 from "../Header/images/5jggim2cfty.webp";
 import images10 from "../Header/images/4-250x250.webp";
-import { Banner } from '@/Banner/Banner';
 
 const images = [
   images1,
