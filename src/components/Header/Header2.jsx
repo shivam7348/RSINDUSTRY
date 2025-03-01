@@ -78,7 +78,8 @@ const Header = () => {
         <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center text-center lg:text-left px-4 lg:px-8">
           {/* Logo & Address Section */}
           <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4">
-            <img src={logo} alt="Company Logo" className="h-12 w-auto" />
+          <Link to="/"><img src={logo} alt="Company Logo" className="h-12 w-auto" />
+</Link>
             <div className="flex items-center space-x-2">
               <FaMapMarkerAlt className="text-red-600 text-xl" />
               <div className="flex flex-col">
@@ -118,10 +119,11 @@ const Header = () => {
           scrolled ? "shadow-sm py-2" : "py-4"
         }`}
       >
-        <div className="container mx-auto px-4 flex justify-center items-center relative">
+        <div className="container mx-auto my-1 px-4 flex justify-center items-center relative">
           {/* 🏆 Logo (Only Visible in Mobile View) */}
           <div className="block lg:hidden absolute left-4">
-            <img src={logo} alt="Company Logo" className="h-12 w-auto" />
+          <Link to="/"><img src={logo} alt="Company Logo" className="h-12 w-auto" />
+          </Link>
           </div>
 
           {/* 📱 Hamburger Menu Button (Right Corner) */}

@@ -39,10 +39,15 @@ const ServiceCard = ({ icon, title, description, bgColor }) => {
 
 const ServiceCards = () => {
   const services = [
-    
+    {
+      icon: <ShieldIcon />,
+      title: "SAFE & SECURE",
+      description: "You benefit from our experience in delivering effective solutions to the complex global supply chains of some of the world's biggest corporations.",
+      bgColor: "#00a3e0"
+    },
     {
       icon: <TimerIcon />,
-      title: "FAST DELIVERY",
+      title: "PRODUCTS MANUFACTURER",
       description: "You benefit from every innovation, whether it involves a simple extension to our Air and Ocean Freight products, whether it means a development in warehousing.",
       bgColor: "#008dbe"
     },

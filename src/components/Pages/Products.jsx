@@ -11,7 +11,7 @@ const ProductComponent = () => {
 <Banner title="Product " breadcrumb="About" image={bannerImage} />
 
 <div className="p-6 text-center min-h-screen max-w-7xl mx-auto bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200">
-  <h1 className="text-5xl font-extrabold text-blue-700 drop-shadow-md mb-8">
+  <h1 className="text-4xl font-bold text-blue-700 drop-shadow-md mb-8">
     Our Products
   </h1>
   
@@ -30,7 +30,7 @@ const ProductComponent = () => {
           />
         </div>
         <div className="p-4">
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">{product.name}</h3>
+          <h3 className="text-4xl font-semibold text-gray-800 mb-2">{product.name}</h3>
           <p className="text-sm text-gray-600">{product.description}</p>
         </div>
       </div>
