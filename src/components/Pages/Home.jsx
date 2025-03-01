@@ -1,14 +1,19 @@
 import React from 'react'
 import Slider from "./Slider/Slider1"
-import AutoSlider from './Slider/AutoSlider'
 import WelcomeSection from './WelcomeSectin';
+import AboutRs from '../About/AboutRs';
+import ServiceCards from './../Cards/ServicesCards';
+
 
 const Home = () => {
   return (
     <div>
       <Slider/>
-      {/* <AutoSlider/> */}
+      <AboutRs/>
+
+     <ServiceCards/> 
       <WelcomeSection/>
+
     </div>
   )
 }

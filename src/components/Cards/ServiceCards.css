@@ -1,0 +1,40 @@
+.service-cards-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    .service-cards-container {
+      flex-direction: column;
+    }
+  }
+  
+  .service-card {
+    flex: 1;
+    padding: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 350px;
+  }
+  
+  .icon-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+  }
+  
+  .card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
