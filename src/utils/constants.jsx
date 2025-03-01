@@ -14,64 +14,70 @@ import images12 from "../components/Header/images/roller-for-continuous-casting-
 const products = [
   {
     id: 1,
-    name: "Product 1",
     image: images1,
+    name: 'Machinery Part',
+    description: 'High-quality machinery parts for industrial use.',
   },
   {
     id: 2,
-    name: "Product 2",
-    image: images2,
+    image: '/images/turning-component.jpg',
+    name: 'Turning Component',
+    description: 'Precision turning components for various applications.',
   },
   {
     id: 3,
-    name: "Product 3",
-    image: images3,
+    image: '/images/custom-job.jpg',
+    name: 'Custom Job Work',
+    description: 'Custom job works tailored to your requirements.',
   },
   {
     id: 4,
-    name: "Product 4",
-    image: images4,
+    image: '/images/industrial-tool.jpg',
+    name: 'Industrial Tool',
+    description: 'Durable industrial tools for heavy-duty tasks.',
   },
-  {
-    id: 5,
-    name: "Product 5",
-    image: images5,
-  },
-  {
-    id: 6,
-    name: "Product 6",
-    image: images6,
-  },
-  {
-    id: 7,
-    name: "Product 7",
-    image: images7,
-  },
-  {
-    id: 8,
-    name: "Product 8",
-    image: images8,
-  },
-  {
-    id: 9,
-    name: "Product 9",
-    image: images9,
-  },
-  {
-    id: 10,
-    name: "Product 10",
-    image: images10,
-  },
-  {
-    id: 11,
-    name: "Product 11",
-    image: images11,
-  },
-  {
-    id: 12,
-    name: "Product 12",
-    image: images12,
-  },
+  // Add more products here...
 ];
 
 export default products;
+
+
+export const services = [
+  {
+    id: 1,
+    name: "Machinery Parts Manufacturing",
+    shortDescription: "High-quality machinery parts tailored to your needs.",
+    description: "We specialize in manufacturing precision machinery parts for various industries, ensuring durability and performance.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXMWunwOqJV6HJhlbl1Cu03FU1rre1UzA7Cw&s",
+    features: [
+      { name: "Material", value: "Steel, Aluminum, etc." },
+      { name: "Precision", value: "±0.01mm" },
+      { name: "Delivery Time", value: "2-4 weeks" },
+    ],
+  },
+  {
+    id: 2,
+    name: "Turning Components",
+    shortDescription: "Custom turning components for industrial applications.",
+    description: "Our turning components are designed to meet the highest standards of accuracy and reliability.",
+    image: "https://3.imimg.com/data3/PP/PX/MY-2921551/turning-components.jpg",
+    features: [
+      { name: "Material", value: "Stainless Steel, Brass, etc." },
+      { name: "Tolerance", value: "±0.02mm" },
+      { name: "Delivery Time", value: "3-5 weeks" },
+    ],
+  },
+  {
+    id: 3,
+    name: "Job Works",
+    shortDescription: "Custom job works for unique industrial requirements.",
+    description: "We offer custom job works to meet specific industrial needs, ensuring quality and precision.",
+    image: "https://www.indiafilings.com/learn/wp-content/uploads/2016/07/Job-Work.jpg",
+    features: [
+      { name: "Scope", value: "Custom designs and prototypes" },
+      { name: "Material Options", value: "Multiple options available" },
+      { name: "Delivery Time", value: "Based on project scope" },
+    ],
+  },
+];
+
