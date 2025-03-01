@@ -105,7 +105,7 @@ const Header = () => {
               <FaEnvelope className="text-blue-600 text-xl" />
               <div className="flex flex-col items-center lg:items-start">
                 <p className="text-gray-600 font-medium">E-mail Us</p>
-                <p className="text-gray-800 font-semibold">info@example.com</p>
+                <p className="text-gray-800 font-semibold">rsindustries@gmail.com</p>
               </div>
             </div>
           </div>
@@ -119,7 +119,12 @@ const Header = () => {
         }`}
       >
         <div className="container mx-auto px-4 flex justify-center items-center relative">
-          {/* Hamburger Menu Button (Right Corner) */}
+          {/* 🏆 Logo (Only Visible in Mobile View) */}
+          <div className="block lg:hidden absolute left-4">
+            <img src={logo} alt="Company Logo" className="h-12 w-auto" />
+          </div>
+
+          {/* 📱 Hamburger Menu Button (Right Corner) */}
           <button
             onClick={toggleMenu}
             className="lg:hidden absolute right-4 top-1/2 transform -translate-y-1/2 focus:outline-none focus:ring-2 focus:ring-white rounded-md p-2 hover:bg-gray-700 transition-colors duration-200"
@@ -129,32 +134,31 @@ const Header = () => {
             {isMenuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
           </button>
 
-          {/* Navigation Menu */}
+          {/* 🌍 Navigation Menu */}
           <nav
             className={`${
               isMenuOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
             } fixed lg:static top-0 left-0 h-full lg:h-auto w-4/5 max-w-sm lg:w-auto 
               bg-gray-800 lg:bg-transparent shadow-xl lg:shadow-none z-50 
               transition-transform duration-300 ease-in-out lg:transition-none
-              flex flex-col lg:flex-row items-center`}
+              flex flex-col lg:flex-row items-center lg:justify-center`}
           >
-            {/* MiddleHeader Content (Visible in Mobile Menu) */}
+            {/* 🏆 MiddleHeader Content (Only Visible in Mobile Menu) */}
             {isMenuOpen && (
               <div className="w-full p-4 bg-gray-700 lg:hidden">
                 <div className="flex flex-col space-y-4">
-                  {/* Logo & Address Section */}
+                  {/* 🏠 Address Section */}
                   <div className="flex flex-col items-center space-y-2">
-                    <img src={logo} alt="Company Logo" className="h-12 w-auto" />
                     <div className="flex items-center space-x-2">
                       <FaMapMarkerAlt className="text-red-600 text-xl" />
                       <div className="flex flex-col text-center">
-                        <p className="text-gray-300">Ghaziabad Add:- Plot No.21, Prem Enclave,</p>
-                        <p className="text-gray-300">Opp, D.P.S, Near Kailash Hospital, Meerut Road, (U.P.) INDIA</p>
+                        <p className="text-white">Ghaziabad Add:- Plot No.21, Prem Enclave,</p>
+                        <p className="text-white">Opp, D.P.S, Near Kailash Hospital, Meerut Road, (U.P.) INDIA</p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Contact Section */}
+                  {/* 📞 Contact Section */}
                   <div className="flex flex-col items-center space-y-2">
                     <div className="flex items-center space-x-2">
                       <FaPhoneAlt className="text-green-600 text-xl" />
@@ -166,12 +170,12 @@ const Header = () => {
                       </div>
                     </div>
 
-                    {/* Email Section */}
+                    {/* ✉️ Email Section */}
                     <div className="flex items-center space-x-2">
                       <FaEnvelope className="text-blue-600 text-xl" />
                       <div className="flex flex-col items-center">
                         <p className="text-gray-300 font-medium">E-mail Us</p>
-                        <p className="text-gray-100 font-semibold">info@example.com</p>
+                        <p className="text-gray-100 font-semibold">rsindustries@gmail.com</p>
                       </div>
                     </div>
                   </div>
@@ -179,10 +183,11 @@ const Header = () => {
               </div>
             )}
 
-            {/* Navigation Links */}
+            {/* 🌍 Navigation Links */}
             <ul
-              className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-5
-                text-white font-medium text-md p-4 lg:p-0 w-full lg:w-auto mx-auto"
+              className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-8
+    text-white font-medium text-md p-4 lg:p-0 w-full lg:w-auto 
+    justify-center items-center mx-auto"
             >
               {navLinks.map((link) => (
                 <li key={link.path} className="w-full lg:w-auto text-center">

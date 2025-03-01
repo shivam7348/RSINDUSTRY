@@ -29,8 +29,6 @@ const images = [
   images9,
   images10,
   images11,
-
-
   images12,
   images13,
   images14,
