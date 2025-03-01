@@ -1,36 +1,34 @@
 import React from 'react';
-import "./ServiceCards.css"
+import "./ServiceCards.css";
 
-// Icons as SVG components
+// Updated SVG Icons
 const ShieldIcon = () => (
   <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M30 70 L30 30 L70 30 M40 50 L55 35" stroke="white" strokeWidth="4" />
-    <path d="M70 50 A20 20 0 1 1 50 70" stroke="white" strokeWidth="4" fill="none" />
+    <path d="M50 15 L75 30 V60 Q50 90 25 60 V30 Z" stroke="white" strokeWidth="4" fill="none" />
+    <circle cx="50" cy="45" r="10" stroke="white" strokeWidth="4" fill="none" />
   </svg>
 );
 
-const TimerIcon = () => (
+const FactoryIcon = () => (
   <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="55" r="25" stroke="white" strokeWidth="4" fill="none" />
-    <line x1="50" y1="55" x2="60" y2="45" stroke="white" strokeWidth="4" />
-    <line x1="50" y1="30" x2="50" y2="20" stroke="white" strokeWidth="4" />
-    <line x1="40" y1="20" x2="60" y2="20" stroke="white" strokeWidth="4" />
+    <rect x="20" y="50" width="60" height="30" stroke="white" strokeWidth="4" fill="none" />
+    <polygon points="40,50 50,40 60,50" stroke="white" strokeWidth="4" fill="none" />
+    <line x1="30" y1="50" x2="30" y2="80" stroke="white" strokeWidth="4" />
   </svg>
 );
 
-const SupportIcon = () => (
+const HeadsetIcon = () => (
   <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M35 45 C35 30, 65 30, 65 45 L65 55 C65 70, 80 70, 80 80 L65 80" stroke="white" strokeWidth="4" fill="none" />
-    <path d="M50 70 A15 15 0 1 0 35 55 L35 45" stroke="white" strokeWidth="4" fill="none" />
+    <circle cx="50" cy="50" r="25" stroke="white" strokeWidth="4" fill="none" />
+    <path d="M25 50 Q20 55 20 65 V70" stroke="white" strokeWidth="4" fill="none" />
+    <path d="M75 50 Q80 55 80 65 V70" stroke="white" strokeWidth="4" fill="none" />
   </svg>
 );
 
 const ServiceCard = ({ icon, title, description, bgColor }) => {
   return (
     <div className="service-card" style={{ backgroundColor: bgColor }}>
-      <div className="icon-container">
-        {icon}
-      </div>
+      <div className="icon-container">{icon}</div>
       <h2 className="card-title">{title}</h2>
       <p className="card-description">{description}</p>
     </div>
@@ -40,22 +38,22 @@ const ServiceCard = ({ icon, title, description, bgColor }) => {
 const ServiceCards = () => {
   const services = [
     {
-      icon: <ShieldIcon />,
-      title: "SAFE & SECURE",
-      description: "You benefit from our experience in delivering effective solutions to the complex global supply chains of some of the world's biggest corporations.",
-      bgColor: "#00a3e0"
+      icon: <ShieldIcon />, 
+      title: "Robust Security",
+      description: "We implement cutting-edge security measures to ensure complete protection for your supply chain.",
+      bgColor: "#004a99"
     },
     {
-      icon: <TimerIcon />,
-      title: "PRODUCTS MANUFACTURER",
-      description: "You benefit from every innovation, whether it involves a simple extension to our Air and Ocean Freight products, whether it means a development in warehousing.",
-      bgColor: "#008dbe"
+      icon: <FactoryIcon />, 
+      title: "Advanced Manufacturing",
+      description: "Our production methods guarantee high-quality products tailored to meet modern demands.",
+      bgColor: "#0077b6"
     },
     {
-      icon: <SupportIcon />,
-      title: "24/7 Support",
-      description: "All of which explains why you'll find the team of outstanding support at Transportation ready to apply their passion for solutions in support of your business.",
-      bgColor: "#00a3e0"
+      icon: <HeadsetIcon />, 
+      title: "24/7 Assistance",
+      description: "Our dedicated support team is always available to help you with your logistics and operational needs.",
+      bgColor: "#0096c7"
     }
   ];
 
