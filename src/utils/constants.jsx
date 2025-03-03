@@ -14,25 +14,25 @@ import images12 from "../components/Header/images/roller-for-continuous-casting-
 const products = [
   {
     id: 1,
-    image: images1,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXMWunwOqJV6HJhlbl1Cu03FU1rre1UzA7Cw&s",
     name: 'Machinery Part',
     description: 'High-quality machinery parts for industrial use.',
   },
   {
     id: 2,
-    image: '/images/turning-component.jpg',
+    image: "https://www.relieng.com/assets/images/precision-turned-parts.jpg",
     name: 'Turning Component',
     description: 'Precision turning components for various applications.',
   },
   {
     id: 3,
-    image: '/images/custom-job.jpg',
+    image: images3,
     name: 'Custom Job Work',
     description: 'Custom job works tailored to your requirements.',
   },
   {
     id: 4,
-    image: '/images/industrial-tool.jpg',
+    image: "https://image.made-in-china.com/2f0j00QTeBpAIlgjqa/IIWA-INDUSTRIAL-TOOL-MARINE-MACHINE-PNEUMATIC-AIR-CHIPPING-HAMMER-PISTOL-TYPE-IMPA-CODE-590361-BEAT-6RC33.webp",
     name: 'Industrial Tool',
     description: 'Durable industrial tools for heavy-duty tasks.',
   },

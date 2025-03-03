@@ -3,7 +3,7 @@ import products from '@/utils/constants';
 import React from 'react';
 
 const ProductComponent = () => {
-  const bannerImage = 'https://5.imimg.com/data5/SELLER/Default/2023/3/293031274/AS/XN/IH/3927721/mechanical-machinery-spare-parts.png';
+  const bannerImage = '';
 
   return (
     <>
