@@ -25,22 +25,16 @@ const ProductsPage = () => {
     {
       category: "Oil & Gas Plant Parts",
       items: [
-<<<<<<< HEAD
         { name: "OIL AND GAS PLANT PART", image: "https://www.12eleven.com/hubfs/Oil%20and%20Gas%20Production%20and%20Process%20Equipment.jpg", description: "Specialized components for oil and gas processing facilities" },
-=======
         { name: "OIL AND GAS PLANT PART", image: "/Linkpi/placeholder/300/200", description: "Specialized components for oil and gas processing facilities" },
->>>>>>> 7c40a12b278b7b4c25341738e4d97c3a457b44ca
         { name: "DIE, TOOLS, JIG FIXTURE", image: "https://5.imimg.com/data5/JQ/PK/CI/SELLER-2831548/dies-jigs-fixture-500x500.jpg", description: "Custom tooling solutions for industrial applications" }
       ]
     },
     {
       category: "Couplers & Connectors",
       items: [
-<<<<<<< HEAD
         { name: "CUPPLER", image: "https://apnagharbanao.in:4000/uploads/25396-1695379575512.jpg", description: "Standard couplers for industrial pipe connections" },
-=======
         { name: "CUPPLER", image: "https://Linkpnagharbanao.in:4000/uploads/36540-1695382506110.jpg", description: "Standard couplers for industrial pipe connections" },
->>>>>>> 7c40a12b278b7b4c25341738e4d97c3a457b44ca
         { name: "DAMY CUPPLER", image: "https://m.media-amazon.com/images/I/71Rfxz07AhL._AC_UF1000,1000_QL80_.jpg", description: "Specialized dummy couplers for testing applications" },
         { name: "SEELK CUPPLER", image: "https://5.imimg.com/data5/SELLER/Default/2024/3/404967322/BD/EV/CA/9164815/screenshot-2024-03-28-at-16-24-59-500x500.png", description: "High-pressure sealing couplers for critical environments" },
         { name: "CHARGING CUPPLER TCC", image: "https://5.imimg.com/data5/SELLER/Default/2023/8/338624146/UL/KD/SL/5507355/tcc-series-1-1692182358585-500x500.jpeg", description: "TCC charging couplers for specialized applications" },
@@ -173,9 +167,7 @@ const ProductsPage = () => {
     
 
       {/* Footer */}
-<<<<<<< HEAD
  
-=======
       <footer className="bg-blue-900 text-white py-8">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -200,7 +192,6 @@ const ProductsPage = () => {
           </div>
         </div>
       </footer>
->>>>>>> 7c40a12b278b7b4c25341738e4d97c3a457b44ca
     </div>
   );
 };

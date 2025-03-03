@@ -27,10 +27,8 @@ const images = [
 ];
 
 const Gallery = () => {
-<<<<<<< HEAD
-=======
+
   const bannerImage = 'https://atlantaremedies.com/wp-content/uploads/2023/04/IMG-20230418-WA0016_2-1024x426.jpg';
->>>>>>> 7c40a12b278b7b4c25341738e4d97c3a457b44ca
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -81,10 +79,9 @@ const Gallery = () => {
   return (
    
       <>
-<<<<<<< HEAD
-=======
+
+
       <Banner title="Gallery" breadcrumb="Gallery" image={bannerImage}/>
->>>>>>> 7c40a12b278b7b4c25341738e4d97c3a457b44ca
       <div className="container mx-auto p-4 max-w-6xl">
         {/* Heading */}
         <h1 className="text-3xl text-blue-700 font-bold text-center my-6">Our Gallery</h1>
