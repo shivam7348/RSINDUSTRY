@@ -1,47 +1,11 @@
+import { products } from '@/utils/constants';
 import React, { useState } from 'react';
 
 const ProductsPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   
-  const products = [
-    {
-      category: "Machining Parts",
-      items: [
-        { name: "ACE CHALD PART", image: "https://5.imimg.com/data5/DY/QP/QC/SELLER-3211704/cnc-turned-components-500x500.jpg", description: "Precision-engineered components for industrial machinery" },
-        { name: "ALL TYPE MACHINING PART", image: "https://5.imimg.com/data5/SELLER/Default/2024/7/436750597/WI/IK/JR/3843285/cnc-machining-parts.png", description: "Custom machined parts for various industrial applications" },
-        { name: "CANVER MACHINING AND PART", image: "/Linkpi/placeholder/300/200", description: "Specialized machining solutions for complex requirements" }
-      ]
-    },
-    {
-      category: "Brass & Copper Parts",
-      items: [
-        { name: "BRASS NIPPLE", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ040UdllTcQzeB_6Rz3bQou_wESIw5_tyn9w&s", description: "High-quality brass nipples for plumbing and industrial use" },
-        { name: "BRASS COMPONENTS", image: "https://www.nikasam.com/img/products/brass-precision-turned-parts/brass-turned-components.webp", description: "Precision brass components for various applications" },
-        { name: "COPPER DEAD CAP", image: "https://5.imimg.com/data5/SELLER/Default/2022/6/BS/KG/RI/26307974/dead-cap-1.jpg", description: "Durable copper dead caps with excellent conductivity" }
-      ]
-    },
-    {
-      category: "Oil & Gas Plant Parts",
-      items: [
-        { name: "OIL AND GAS PLANT PART", image: "https://www.12eleven.com/hubfs/Oil%20and%20Gas%20Production%20and%20Process%20Equipment.jpg", description: "Specialized components for oil and gas processing facilities" },
-        { name: "OIL AND GAS PLANT PART", image: "/Linkpi/placeholder/300/200", description: "Specialized components for oil and gas processing facilities" },
-        { name: "DIE, TOOLS, JIG FIXTURE", image: "https://5.imimg.com/data5/JQ/PK/CI/SELLER-2831548/dies-jigs-fixture-500x500.jpg", description: "Custom tooling solutions for industrial applications" }
-      ]
-    },
-    {
-      category: "Couplers & Connectors",
-      items: [
-        { name: "CUPPLER", image: "https://apnagharbanao.in:4000/uploads/25396-1695379575512.jpg", description: "Standard couplers for industrial pipe connections" },
-        { name: "CUPPLER", image: "https://Linkpnagharbanao.in:4000/uploads/36540-1695382506110.jpg", description: "Standard couplers for industrial pipe connections" },
-        { name: "DAMY CUPPLER", image: "https://m.media-amazon.com/images/I/71Rfxz07AhL._AC_UF1000,1000_QL80_.jpg", description: "Specialized dummy couplers for testing applications" },
-        { name: "SEELK CUPPLER", image: "https://5.imimg.com/data5/SELLER/Default/2024/3/404967322/BD/EV/CA/9164815/screenshot-2024-03-28-at-16-24-59-500x500.png", description: "High-pressure sealing couplers for critical environments" },
-        { name: "CHARGING CUPPLER TCC", image: "https://5.imimg.com/data5/SELLER/Default/2023/8/338624146/UL/KD/SL/5507355/tcc-series-1-1692182358585-500x500.jpeg", description: "TCC charging couplers for specialized applications" },
-        { name: "ALL PIPE NEW CUPPLER", image: "https://m.media-amazon.com/images/I/61ssCiJKvwL.jpg", description: "Universal pipe couplers for various diameters" }
-      ]
-    }
-  ];
-
+ 
   // Get all categories for filter
   const categories = ['all', ...products.map(p => p.category)];
   

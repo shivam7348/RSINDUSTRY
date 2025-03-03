@@ -1,5 +1,5 @@
 import Banner from '@/Banner/Banner';
-import products from '@/utils/constants';
+
 import React from 'react';
 import ProductsPage from './../Product/ProductsPage';
 
