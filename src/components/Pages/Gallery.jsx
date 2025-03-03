@@ -10,6 +10,7 @@ import images8 from "../Header/images/round-metal-mill-rollers-765.jpg";
 import images9 from "../Header/images/5jggim2cfty.webp";
 import images10 from "../Header/images/4-250x250.webp";
 
+
 const images = [
   images1,
   images2,
@@ -24,6 +25,7 @@ const images = [
 ];
 
 const Gallery = () => {
+
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -71,13 +73,14 @@ const Gallery = () => {
   }, [currentIndex]);
 
   return (
-    <>
+   
+      <>
       <div className="container mx-auto p-4 max-w-6xl">
         {/* Heading */}
-        <h1 className="text-3xl text-blue-700 font-bold text-center mb-8">Our Gallery</h1>
+        <h1 className="text-3xl text-blue-700 font-bold text-center my-6">Our Gallery</h1>
 
         {/* Image Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {images.map((image, index) => (
             <div
               key={index}
@@ -143,7 +146,8 @@ const Gallery = () => {
           </div>
         )}
       </div>
-    </>
+      </>
+   
   );
 };
 

@@ -6,6 +6,7 @@ import ProductComponent from "./components/Pages/Products";
 import WorkWith from "./components/Pages/WorkWoth";
 import Gallery from "./components/Pages/Gallery";
 import ContactUs from "./components/Pages/Contact";
+import ServicesPage from "./components/Pages/Services";
 
 
 const router = createBrowserRouter([
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: "services",
-        element: <WorkWith />,
+        element: <ServicesPage />,
       },
       {
         path: "gallery",
