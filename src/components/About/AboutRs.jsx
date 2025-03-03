@@ -7,7 +7,7 @@ const AboutRs = () => {
       <div className="w-2/3 pr-6">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">About R.S Industries</h1>
         <p className="text-gray-600 mb-4">
-        R.S.Industries is a leading manufacturer and trading company specializing in machinery parts, turning components, and job works. With a commitment to quality and precision, we serve a diverse range of industries.
+        R.S. Industries is a leading manufacturer and trading company specializing in machinery parts, turning components, and job works. With a commitment to quality and precision, we cater to a diverse range of industries, ensuring reliable and efficient solutions. Our state-of-the-art infrastructure, skilled workforce, and customer-centric approach enable us to deliver high-performance products that meet industry standards. Driven by innovation and excellence, we continuously strive to exceed client expectations and build long-term partnerships.
         </p>
         {/* <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">
           Read More..

@@ -1,20 +1,21 @@
 import Banner from '@/Banner/Banner';
 import products from '@/utils/constants';
 import React from 'react';
+import ProductsPage from './../Product/ProductsPage';
 
 const ProductComponent = () => {
-  const bannerImage = '';
+  const bannerImage = 'https://www.shutterstock.com/image-photo/blue-color-laser-cnc-cut-260nw-2149033525.jpg';
 
   return (
     <>
       <Banner title="Product" breadcrumb="About" image={bannerImage} />
 
-      <div className="p-4 sm:p-6 text-center min-h-screen max-w-7xl mx-auto bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200">
+      {/* <div className="p-4 sm:p-6 text-center min-h-screen max-w-7xl mx-auto bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200">
         <h1 className="text-3xl sm:text-4xl font-bold text-blue-700 drop-shadow-md mb-6">
           Our Products
         </h1>
 
-        {/* Product Grid */}
+      
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {products.map((product) => (
             <div
@@ -35,7 +36,8 @@ const ProductComponent = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
+      <ProductsPage/>
     </>
   );
 };
