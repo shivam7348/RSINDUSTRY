@@ -60,59 +60,14 @@ const ProductsPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300 ">
-      {/* Hero Section */}
-      {/* <section className="relative bg-blue-800 dark:bg-blue-900 text-white">
-        <div className="absolute inset-0 overflow-hidden">
-          <img 
-            src="/Linkpi/placeholder/1920/600" 
-            alt="Manufacturing Background" 
-            className="w-full h-full object-cover object-center opacity-20"
-          />
-        </div>
-        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              RS Manufacturing
-            </h1>
-            <p className="text-xl md:text-2xl mb-8">
-              Precision Machining & Industrial Parts Manufacturing
-            </p>
-          
-          </div>
-        </div>
-      </section> */}
+     
+    
 
-      {/* Filter and Search Section */}
       <section className="max-w-6xl mx-auto p-6 mb-6 ">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8 ">
           <h2 className="text-3xl font-bold text-center text-gray-800">Our Industrial Products</h2>
           
-          <div className="flex flex-col sm:flex-row gap-4">
-            {/* <div className="relative">
-              <input
-                type="text"
-                placeholder="Search products..."
-                className="w-full sm:w-64 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white dark:border-gray-700"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 absolute right-3 top-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div> */}
-            
-            <select 
-              className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white dark:border-gray-700"
-              value={activeCategory}
-              onChange={(e) => setActiveCategory(e.target.value)}
-            >
-              {categories.map((category, index) => (
-                <option key={index} value={category}>
-                  {category === 'all' ? 'All Categories' : category}
-                </option>
-              ))}
-            </select>
-          </div>
+          
         </div>
 
         {/* Category Tabs */}
@@ -152,9 +107,7 @@ const ProductsPage = () => {
                   <div className="p-6">
                     <h4 className="text-xl font-semibold mb-2 dark:text-white">{product.name}</h4>
                     <p className="text-gray-600 dark:text-gray-300 mb-4">{product.description}</p>
-                    {/* <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
-                      Request Info
-                    </button> */}
+                  
                   </div>
                 </div>
               ))}
@@ -163,35 +116,8 @@ const ProductsPage = () => {
         ))}
       </section>
 
-      {/* Contact Form Section */}
-    
-
-      {/* Footer */}
  
-      <footer className="bg-blue-900 text-white py-8">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <h3 className="text-xl font-bold">RS Manufacturing</h3>
-              <p className="text-blue-200">Precision Machining & Industrial Parts</p>
-            </div>
-            <div className="flex space-x-4">
-              <Link to="/about" className="text-blue-200 hover:text-white transition-colors">
-                About Us
-              </Link>
-              <Link to="products" className="text-blue-200 hover:text-white transition-colors">
-                Products
-              </Link>
-              <Link to="contact" className="text-blue-200 hover:text-white transition-colors">
-                Contact
-              </Link>
-            </div>
-          </div>
-          <div className="mt-8 pt-8 border-t border-blue-800 text-center text-blue-300">
-            <p>© 2025 RS Manufacturing. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+    
     </div>
   );
 };
