@@ -119,7 +119,7 @@ const productData = [
 const WelcomeSection = () => {
   return (
     <div className="p-4 text-center min-h-screen max-w-6xl mx-auto bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200">
-      <h1 className="text-4xl sm:text-5xl lg:text-10xl font-bold text-blue-700 drop-shadow-md">
+      <h1 className="text-3xl sm:text-5xl lg:text-10xl font-bold text-blue-700 drop-shadow-md">
         Welcome to R.S. Industries
       </h1>
       <p className="text-lg sm:text-xl text-gray-800 mt-2 font-medium">

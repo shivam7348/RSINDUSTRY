@@ -14,7 +14,7 @@ const ServicesPage = () => {
 
   return (
     <>
-      <Banner  title="Our Services " breadcrumb="About" image={bannerImage} />
+      <Banner  title="Our Services " breadcrumb="Services" image={bannerImage} />
 
     <div className="container mx-auto px-4 py-12 max-w-6xl">
       <h1 className="text-3xl font-bold mb-8 text-center">Our Services</h1>

@@ -9,7 +9,7 @@ import React from "react";
 
   return (
     <>
-      <Banner  title="Contact Us " breadcrumb="About" image={bannerImage} />
+      <Banner  title="Contact Us " breadcrumb="Contact us" image={bannerImage} />
       <div className="p-6 text-center min-h-screen max-w-7xl mx-auto bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200">
       {/* <h1 className="text-5xl font-extrabold text-blue-700 drop-shadow-md">
         Contact Us

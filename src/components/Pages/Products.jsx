@@ -8,7 +8,7 @@ const ProductComponent = () => {
 
   return (
     <>
-      <Banner title="Product" breadcrumb="About" image={bannerImage} />
+      <Banner title="Product" breadcrumb="Product" image={bannerImage} />
 
       {/* <div className="p-4 sm:p-6 text-center min-h-screen max-w-7xl mx-auto bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200">
         <h1 className="text-3xl sm:text-4xl font-bold text-blue-700 drop-shadow-md mb-6">
