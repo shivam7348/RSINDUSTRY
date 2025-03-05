@@ -1,8 +1,11 @@
+import Banner from '@/Banner/Banner';
 import { services } from '@/utils/constants';
 import React, { useState } from 'react';
  // Assuming you have a services data file
 
-const ServicesPage = () => {
+const ServicesPage = () => {                
+  const bannerImage = 'https://www.shutterstock.com/image-photo/blue-color-laser-cnc-cut-260nw-2149033525.jpg';
+
   const [selectedService, setSelectedService] = useState(null);
 
   const handleServiceClick = (service) => {
@@ -10,6 +13,9 @@ const ServicesPage = () => {
   };
 
   return (
+    <>
+      <Banner  title="Our Services " breadcrumb="About" image={bannerImage} />
+
     <div className="container mx-auto px-4 py-12 max-w-6xl">
       <h1 className="text-3xl font-bold mb-8 text-center">Our Services</h1>
       
@@ -108,6 +114,8 @@ const ServicesPage = () => {
         </button>
       </div>
     </div>
+    </>
+   
   );
 };
 

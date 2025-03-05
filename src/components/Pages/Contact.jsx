@@ -1,9 +1,19 @@
-export default function ContactUs() {
+
+import Banner from "@/Banner/Banner";
+import React from "react";
+
+
+ function ContactUs() {
+  const bannerImage = 'https://www.shutterstock.com/image-photo/blue-color-laser-cnc-cut-260nw-2149033525.jpg';
+
+
   return (
-    <div className="p-6 text-center min-h-screen max-w-7xl mx-auto bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200">
-      <h1 className="text-5xl font-extrabold text-blue-700 drop-shadow-md">
+    <>
+      <Banner  title="Contact Us " breadcrumb="About" image={bannerImage} />
+      <div className="p-6 text-center min-h-screen max-w-7xl mx-auto bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200">
+      {/* <h1 className="text-5xl font-extrabold text-blue-700 drop-shadow-md">
         Contact Us
-      </h1>
+      </h1> */}
       <p className="text-xl text-gray-800 mt-2 font-medium">
         Get in touch with R.S. Industries
       </p>
@@ -79,5 +89,8 @@ export default function ContactUs() {
         </form>
       </div>
     </div>
+    </>
   );
 }
+
+export default ContactUs

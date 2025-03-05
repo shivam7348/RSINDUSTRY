@@ -28,7 +28,7 @@ const images = [
 
 const Gallery = () => {
 
-  const bannerImage = 'https://atlantaremedies.com/wp-content/uploads/2023/04/IMG-20230418-WA0016_2-1024x426.jpg';
+  const bannerImage = 'https://www.shutterstock.com/image-photo/blue-color-laser-cnc-cut-260nw-2167078051.jpg';
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);

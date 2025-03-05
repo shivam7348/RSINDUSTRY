@@ -63,7 +63,7 @@ export const services = [
       items: [
         { name: "ACE CHALD PART", image: "https://5.imimg.com/data5/DY/QP/QC/SELLER-3211704/cnc-turned-components-500x500.jpg", description: "Precision-engineered components for industrial machinery" },
         { name: "ALL TYPE MACHINING PART", image: "https://5.imimg.com/data5/SELLER/Default/2024/7/436750597/WI/IK/JR/3843285/cnc-machining-parts.png", description: "Custom machined parts for various industrial applications" },
-        { name: "CANVER MACHINING AND PART", image: "/Linkpi/placeholder/300/200", description: "Specialized machining solutions for complex requirements" }
+        { name: "CANVER MACHINING AND PART", image: "https://precisionmachiningpro.com/wp-content/uploads/2024/01/Specialized-CNC-machined-parts.jpg", description: "Specialized machining solutions for complex requirements" }
       ]
     },
     {
