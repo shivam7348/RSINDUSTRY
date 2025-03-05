@@ -41,20 +41,21 @@ const ServiceCards = () => {
       icon: <ShieldIcon />, 
       title: "Robust Security",
       description: "We implement cutting-edge security measures to ensure complete protection for your supply chain.",
-      bgColor: "#004a99"
+      bgColor: "#6699cc" // Lighter shade of #004a99
     },
     {
       icon: <FactoryIcon />, 
       title: "Advanced Manufacturing",
       description: "Our production methods guarantee high-quality products tailored to meet modern demands.",
-      bgColor: "#0077b6"
+      bgColor: "#66a3d2" // Lighter shade of #0077b6
     },
     {
       icon: <HeadsetIcon />, 
       title: "24/7 Assistance",
       description: "Our dedicated support team is always available to help you with your logistics and operational needs.",
-      bgColor: "#0096c7"
+      bgColor: "#66b8de" // Lighter shade of #0096c7
     }
+    
   ];
 
   return (
