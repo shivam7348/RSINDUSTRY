@@ -7,6 +7,7 @@ import ProductsPage from '../Product/ProductsPage';
 
 
 const Home = () => {
+  
   return (
     <div>
       <Slider/>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./ServiceCards.css";
 
 // Updated SVG Icons
@@ -36,6 +36,10 @@ const ServiceCard = ({ icon, title, description, bgColor }) => {
 };
 
 const ServiceCards = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Page upar se shuru ho
+  }, []);
   const services = [
     {
       icon: <ShieldIcon />, 
