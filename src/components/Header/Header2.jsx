@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import logo from "../Footer/logo.png"; // Ensure the correct path to your logo
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const location = useLocation();
 
   // Handle scroll effect
@@ -24,6 +25,7 @@ const Header = () => {
   // Close menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
+    setProductsDropdownOpen(false);
   }, [location]);
 
   // Close menu when escape key is pressed
@@ -31,17 +33,35 @@ const Header = () => {
     const handleEscape = (e) => {
       if (e.key === "Escape") {
         setIsMenuOpen(false);
+        setProductsDropdownOpen(false);
       }
     };
 
-    if (isMenuOpen) {
+    if (isMenuOpen || productsDropdownOpen) {
       document.addEventListener("keydown", handleEscape);
     }
 
     return () => {
       document.removeEventListener("keydown", handleEscape);
     };
-  }, [isMenuOpen]);
+  }, [isMenuOpen, productsDropdownOpen]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (productsDropdownOpen && !e.target.closest('.products-dropdown-container')) {
+        setProductsDropdownOpen(false);
+      }
+    };
+
+    if (productsDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [productsDropdownOpen]);
 
   // Toggle body scroll when menu is open
   useEffect(() => {
@@ -60,16 +80,28 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const toggleProductsDropdown = () => {
+    setProductsDropdownOpen(!productsDropdownOpen);
+  };
+
   const navLinks = [
     { path: "/", label: "HOME" },
     { path: "/about", label: "ABOUT" },
-    { path: "/products", label: "PRODUCTS" },
+    // Products is now handled separately
     { path: "/services", label: "SERVICES" },
     { path: "/gallery", label: "GALLERY" },
     { path: "/contact", label: "CONTACT US" },
   ];
 
+  const productCategories = [
+    { path: "/products/conveyor-spare-parts", label: "Conveyor Spare Parts" },
+    { path: "/products/roller-mill-parts", label: "Roller Mill Parts" },
+    { path: "/products/ac-spare-parts", label: "AC Spare Parts" },
+    { path: "/products/other-spare-parts", label: "Other Spare Parts" },
+  ];
+
   const isActive = (path) => location.pathname === path;
+  const isProductPage = location.pathname.includes("/products");
 
   return (
     <>
@@ -78,8 +110,7 @@ const Header = () => {
         <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center text-center lg:text-left px-4 lg:px-8">
           {/* Logo & Address Section */}
           <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4">
-          <Link to="/"><img src={logo} alt="Company Logo" className="h-12 w-auto" />
-</Link>
+            <Link to="/"><img src={logo} alt="Company Logo" className="h-12 w-auto" /></Link>
             <div className="flex items-center space-x-2">
               <FaMapMarkerAlt className="text-red-600 text-xl" />
               <div className="flex flex-col">
@@ -120,13 +151,12 @@ const Header = () => {
         }`}
       >
         <div className="container -m-4 my-2 px-4 flex justify-center items-center relative">
-          {/* 🏆 Logo (Only Visible in Mobile View) */}
+          {/* Logo (Only Visible in Mobile View) */}
           <div className="block lg:hidden absolute left-4">
-          <Link to="/"><img src={logo} alt="Company Logo" className="h-12 w-auto rounded-md" />
-          </Link>
+            <Link to="/"><img src={logo} alt="Company Logo" className="h-12 w-auto rounded-md" /></Link>
           </div>
 
-          {/* 📱 Hamburger Menu Button (Right Corner) */}
+          {/* Hamburger Menu Button (Right Corner) */}
           <button
             onClick={toggleMenu}
             className="lg:hidden absolute right-4 top-1/2 transform -translate-y-1/2 focus:outline-none focus:ring-2 focus:ring-white rounded-md p-2 hover:bg-gray-700 transition-colors duration-200"
@@ -136,7 +166,7 @@ const Header = () => {
             {isMenuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
           </button>
 
-          {/* 🌍 Navigation Menu */}
+          {/* Navigation Menu */}
           <nav
             className={`${
               isMenuOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
@@ -145,11 +175,11 @@ const Header = () => {
               transition-transform duration-300 ease-in-out lg:transition-none
               flex flex-col lg:flex-row items-center lg:justify-center`}
           >
-            {/* 🏆 MiddleHeader Content (Only Visible in Mobile Menu) */}
+            {/* MiddleHeader Content (Only Visible in Mobile Menu) */}
             {isMenuOpen && (
               <div className="w-full p-4 bg-gray-700 lg:hidden">
                 <div className="flex flex-col space-y-4">
-                  {/* 🏠 Address Section */}
+                  {/* Address Section */}
                   <div className="flex flex-col items-center space-y-2">
                     <div className="flex items-center space-x-2">
                       <FaMapMarkerAlt className="text-red-600 text-xl" />
@@ -160,7 +190,7 @@ const Header = () => {
                     </div>
                   </div>
 
-                  {/* 📞 Contact Section */}
+                  {/* Contact Section */}
                   <div className="flex flex-col items-center space-y-2">
                     <div className="flex items-center space-x-2">
                       <FaPhoneAlt className="text-green-600 text-xl" />
@@ -172,7 +202,7 @@ const Header = () => {
                       </div>
                     </div>
 
-                    {/* ✉️ Email Section */}
+                    {/* Email Section */}
                     <div className="flex items-center space-x-2">
                       <FaEnvelope className="text-blue-600 text-xl" />
                       <div className="flex flex-col items-center">
@@ -185,12 +215,13 @@ const Header = () => {
               </div>
             )}
 
-            {/* 🌍 Navigation Links */}
+            {/* Navigation Links */}
             <ul
               className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-8
-    text-white font-medium text-md p-4 lg:p-0 w-full lg:w-auto 
-    justify-center items-center mx-auto"
+                text-white font-medium text-md p-4 lg:p-0 w-full lg:w-auto 
+                justify-center items-center mx-auto"
             >
+              {/* Regular Nav Links */}
               {navLinks.map((link) => (
                 <li key={link.path} className="w-full lg:w-auto text-center">
                   <Link
@@ -216,6 +247,55 @@ const Header = () => {
                   </Link>
                 </li>
               ))}
+
+              {/* Products Dropdown */}
+              <li className="w-full lg:w-auto text-center products-dropdown-container relative">
+                <button
+                  onClick={toggleProductsDropdown}
+                  className={`relative group inline-flex items-center py-2 w-full lg:w-auto whitespace-nowrap
+                    ${
+                      isProductPage
+                        ? "text-white font-semibold"
+                        : "text-gray-300 hover:text-white"
+                    }`}
+                  aria-expanded={productsDropdownOpen}
+                  aria-haspopup="true"
+                >
+                  PRODUCTS
+                  <ChevronDown className={`ml-1 w-4 h-4 transition-transform ${productsDropdownOpen ? 'rotate-180' : ''}`} />
+                  <span
+                    className={`absolute left-0 bottom-0 w-full h-0.5 bg-white 
+                      transition-all duration-300 origin-left
+                      ${
+                        isProductPage
+                          ? "scale-x-100"
+                          : "scale-x-0 group-hover:scale-x-100"
+                      }`}
+                  ></span>
+                </button>
+
+                {/* Dropdown Menu */}
+                <div 
+                  className={`${
+                    productsDropdownOpen ? 'block' : 'hidden'
+                  } absolute left-0 mt-1 w-56 rounded-md shadow-lg bg-gray-700 ring-1 ring-black ring-opacity-5 
+                  lg:origin-top-left lg:absolute lg:left-0 lg:right-auto
+                  text-left z-50`}
+                >
+                  <div className="py-1">
+                    {productCategories.map((category) => (
+                      <Link
+                        key={category.path}
+                        to={category.path}
+                        className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-600 hover:text-white w-full text-left"
+                        onClick={() => setProductsDropdownOpen(false)}
+                      >
+                        {category.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </li>
             </ul>
           </nav>
         </div>
