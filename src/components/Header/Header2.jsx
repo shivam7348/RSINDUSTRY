@@ -92,12 +92,12 @@ const Header = () => {
     { path: "/gallery", label: "GALLERY" },
     { path: "/contact", label: "CONTACT US" },
   ];
-
+  
   const productCategories = [
-    { path: "/products/conveyor-spare-parts", label: "Conveyor Spare Parts" },
-    { path: "/products/roller-mill-parts", label: "Roller Mill Parts" },
-    { path: "/products/ac-spare-parts", label: "AC Spare Parts" },
-    { path: "/products/other-spare-parts", label: "Other Spare Parts" },
+    { path: "/products/conveyor-spare-parts", label: " CONVEYOR SPARE PARTS" },
+    { path: "/products/roller-mill-parts", label: "  ROLLER MILL PARTS" },
+    { path: "/products/ac-spare-parts", label: "  AC SPARE PARTS" },
+    { path: "/products/other-spare-parts", label: " OTHER SPARE PARTS" },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -222,7 +222,7 @@ const Header = () => {
                 justify-center items-center mx-auto"
             >
               {/* Regular Nav Links */}
-              {navLinks.map((link) => (
+              {navLinks.slice(0, 2).map((link) => (
                 <li key={link.path} className="w-full lg:w-auto text-center">
                   <Link
                     to={link.path}
@@ -248,7 +248,7 @@ const Header = () => {
                 </li>
               ))}
 
-              {/* Products Dropdown */}
+              {/* Products Dropdown - Placed right after About */}
               <li className="w-full lg:w-auto text-center products-dropdown-container relative">
                 <button
                   onClick={toggleProductsDropdown}
@@ -296,6 +296,33 @@ const Header = () => {
                   </div>
                 </div>
               </li>
+
+              {/* Remaining Regular Nav Links */}
+              {navLinks.slice(2).map((link) => (
+                <li key={link.path} className="w-full lg:w-auto text-center">
+                  <Link
+                    to={link.path}
+                    className={`relative group inline-block py-2 w-full lg:w-auto whitespace-nowrap
+                      ${
+                        isActive(link.path)
+                          ? "text-white font-semibold"
+                          : "text-gray-300 hover:text-white"
+                      }`}
+                    aria-current={isActive(link.path) ? "page" : undefined}
+                  >
+                    {link.label}
+                    <span
+                      className={`absolute left-0 bottom-0 w-full h-0.5 bg-white 
+                        transition-all duration-300 origin-left
+                        ${
+                          isActive(link.path)
+                            ? "scale-x-100"
+                            : "scale-x-0 group-hover:scale-x-100"
+                        }`}
+                    ></span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>

@@ -13,12 +13,6 @@ import RollerMillParts from "./components/Pages/RollerMillParts";
 import ACSpareParts from "./components/Pages/ACSpareParts";
 import OtherSpareParts from "./components/Pages/OtherSpareParts";
 
-// Import product category components
-// You'll need to create these components or modify the ProductComponent to handle categories
-// import ConveyorSpareParts from "./components/Products/ConveyorSpareParts";
-// import RollerMillParts from "./components/Products/RollerMillParts";
-// import ACSpareParts from "./components/Products/ACSpareParts";
-// import OtherSpareParts from "./components/Products/OtherSpareParts";
 
 const router = createBrowserRouter([
   {

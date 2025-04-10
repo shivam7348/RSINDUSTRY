@@ -1,4 +1,7 @@
 import React from "react";
+import { Factory, ShieldCheck, Gauge, PackageCheck, Settings, HardHat } from "lucide-react";
+
+// Import all your images
 import images1 from "../Header/images/Fig-48-Example-of-Rolling-an-Angle-Bar.jpg";
 import images2 from "../Header/images/download (1).jpg";
 import images3 from "../Header/images/images (1).jpg";
@@ -16,7 +19,6 @@ import images14 from "../Header/images/spare-parts-for-steel-rolling-mills-rolle
 import images15 from "../Header/images/spare_parts_for_steel_rolling_mill_logo.jpg";
 import images16 from "../Header/images/special-metals-machined-components.jpg";
 
-// Product data with unique names and titles
 const productData = [
   {
     id: 1,
@@ -117,38 +119,109 @@ const productData = [
 ];
 
 const WelcomeSection = () => {
+  const features = [
+    {
+      icon: <Factory className="w-10 h-10 text-blue-600" />,
+      title: "Modern Manufacturing",
+      description: "20,000 sq ft facility with CNC machines"
+    },
+    {
+      icon: <ShieldCheck className="w-10 h-10 text-blue-600" />,
+      title: "Quality Assurance",
+      description: "ISO certified quality processes"
+    },
+    {
+      icon: <Gauge className="w-10 h-10 text-blue-600" />,
+      title: "Precision Engineering",
+      description: "±0.001mm tolerance standards"
+    },
+    {
+      icon: <PackageCheck className="w-10 h-10 text-blue-600" />,
+      title: "Timely Delivery",
+      description: "98% on-time delivery record"
+    },
+    {
+      icon: <Settings className="w-10 h-10 text-blue-600" />,
+      title: "Custom Solutions",
+      description: "Tailored to your specifications"
+    },
+    {
+      icon: <HardHat className="w-10 h-10 text-blue-600" />,
+      title: "Expert Team",
+      description: "30+ years industry experience"
+    }
+  ];
+
   return (
-    <div className="p-4 text-center min-h-screen max-w-6xl mx-auto bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200">
-      <h1 className="text-3xl sm:text-5xl lg:text-10xl font-bold text-blue-700 drop-shadow-md">
-        Welcome to R.S. Industries
-      </h1>
-      <p className="text-lg sm:text-xl text-gray-800 mt-2 font-medium">
-        Leading the way in quality and innovation
-      </p>
+    <div className="min-h-screen">
+      {/* Welcome Text Section */}
+      <div className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <span className="text-blue-600">R.S. Industries</span> Manufacturing
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Precision engineered components for the metalworking industry since 1985
+          </p>
+          <div className="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+            We specialize in manufacturing high-quality rollers, mill components, and precision parts for the steel and metal processing industries. 
+            Our commitment to excellence and customer satisfaction has made us a trusted partner for industries worldwide.
+          </p>
+        </div>
+      </div>
 
-      <h2 className="text-3xl sm:text-4xl font-bold mt-5 text-gray-900">
-        Our Manufacturing Products
-      </h2>
-
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {productData.map((product) => (
-          <div
-            key={product.id}
-            className="overflow-hidden rounded-lg shadow-lg bg-white hover:shadow-xl transition-all duration-300 flex flex-col"
-          >
-            <div className="relative">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full aspect-[4/3] object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-            <div className="p-3 flex-1 flex flex-col bg-white">
-              <h3 className="font-bold text-lg text-blue-700">{product.name}</h3>
-              <p className="text-sm text-gray-600">{product.title}</p>
-            </div>
+      {/* Features Section */}
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
+            <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
           </div>
-        ))}
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex justify-center mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">{feature.title}</h3>
+                <p className="text-gray-600 text-center">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Products Section */}
+      <div className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Products</h2>
+            <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+              High-quality components for industrial applications
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {productData.map((product) => (
+              <div key={product.id} className="group relative overflow-hidden rounded-lg bg-white border border-gray-200 hover:border-blue-300 transition-all">
+                <div className="aspect-w-4 aspect-h-3 overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-lg text-gray-800">{product.name}</h3>
+                  <p className="text-sm text-gray-500">{product.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
